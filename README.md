@@ -133,3 +133,14 @@ Every print contains the following information:
     - A unique id.
     - Information about the spawn site. (The code that called `spawn()` or `spawn_with_handle()`)
 
+
+## License
+
+This project is licensed under either of
+
+ * Apache License, Version 2.0, ([LICENSE-APACHE](LICENSE-APACHE) or
+   https://www.apache.org/licenses/LICENSE-2.0)
+ * MIT license ([LICENSE-MIT](LICENSE-MIT) or
+   https://opensource.org/licenses/MIT)
+
+at your option.
