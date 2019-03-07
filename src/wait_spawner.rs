@@ -214,7 +214,8 @@ pub struct WaitSpawner<S> {
 }
 
 /// A future that resolves when no more progress
-/// is possible
+/// is possible for futures that were spawned through
+/// the WaitSpawner proxy.
 pub struct ProgressDone {
     arc_mutex_tracker: Arc<Mutex<Tracker>>,
     waker_saved: bool,
