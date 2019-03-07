@@ -73,19 +73,8 @@ impl Tracker {
     /// be rescheduled later)
     pub fn insert(&mut self, id: usize) {
         assert!(self.info.contains_key(&id));
-        // Note: We would have expected that 
-        // it is not possible to wake up a future that already resolved,
-        // but it seems like it does happen when using spawn_with_handle() for some reason.
-        // This could be a bug.
-        //
-        // Ideally we should have:
-        //
-        // assert!(!self.done.contains(&id));
-        //
-        // Instead, we use this workaround for this problem:
-        if !self.done.contains(&id) {
-            self.pending.insert(id);
-        }
+        assert!(!self.done.contains(&id));
+        self.pending.insert(id);
     }
 
     /// Remove a pending spawned future
